@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
+    'drf_spectacular',
     'app',
     'authentication',
     'tasks',
@@ -122,6 +123,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 
@@ -130,4 +132,17 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
+}
+
+# Spectacular settings
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'To Do API',
+    'DESCRIPTION': 'API para gerenciar tarefas. Criada para ser utilizada na matéria de Fundamentos de DevOps.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SWAGGER_UI_SETTINGS': {
+        'docExpansion': 'none',
+        'defaultModelsExpandDepth': -1,
+    },
 }
