@@ -9,11 +9,6 @@ Antes de começar, certifique-se de que você tenha as seguintes ferramentas ins
 - [Python (versão 3.8 ou superior)](https://www.python.org/)
 - [pip](https://pip.pypa.io/) (gerenciador de pacotes do Python)
 
-> Para instalar o `virtualenv` globalmente:
-```bash
-pip install virtualenv
-```
-
 ## Clonando o Projeto
 
 Clone o repositório para sua máquina local:
