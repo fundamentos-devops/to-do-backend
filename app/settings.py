@@ -14,9 +14,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%zaili3o^t1k41+@_ur&s442^@9qa*gre1daf4rt5cl(r@qzew'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "True"
+DEBUG = bool(os.getenv("DEBUG", "False") == "True")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS', 'localhost')]
 
 
 # Application definition
@@ -159,6 +159,7 @@ SPECTACULAR_SETTINGS = {
 
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
+print(DEBUG)
 
 # Static files settings
 STATIC_URL = '/static/'
