@@ -37,6 +37,27 @@ Com o ambiente virtual ativado, instale as dependências do projeto:
 pip install -r requirements.txt
 ```
 
+## Configurando o Projeto
+
+No diretório `contrib/`, você encontrará arquivos e exemplos úteis para configuração do ambiente.
+
+Certifique-se de configurar as seguintes variáveis de ambiente:
+
+- `DEBUG`: Define se o ambiente está em modo de desenvolvimento (`True`) ou produção (`False`).
+- `ALLOWED_HOSTS`: Lista de domínios/IPs permitidos para acessar a aplicação.
+- `DATABASE_URL`: URL de conexão com o banco de dados (por exemplo, PostgreSQL).
+
+Você pode criar um arquivo `.env` na raiz do projeto com essas variáveis.  
+Exemplo:
+
+```env
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+DATABASE_URL=sqlite:///db.sqlite3
+```
+
+> Dica: use o arquivo de exemplo disponível em `contrib/` para facilitar essa configuração.
+
 ## Executando o Projeto
 
 Para rodar o servidor de desenvolvimento do Django:
@@ -45,4 +66,4 @@ Para rodar o servidor de desenvolvimento do Django:
 python manage.py runserver
 ```
 
-O backend estará disponível por padrão em: [http:localhost:8000/api/v1/](http://127.0.0.1:8000/)
+O backend estará disponível por padrão em: [http://127.0.0.1:8000/api/v1/](http://127.0.0.1:8000/api/v1/)
